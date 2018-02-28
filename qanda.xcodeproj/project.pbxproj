@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A85D526420461BB500D56660 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85D526320461BB500D56660 /* LoginViewController.swift */; };
+		A88C90902045FAEE000C1603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88C908F2045FAEE000C1603 /* AppDelegate.swift */; };
+		A88C90922045FAEE000C1603 /* ShowAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88C90912045FAEE000C1603 /* ShowAllViewController.swift */; };
+		A88C90952045FAEE000C1603 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88C90932045FAEE000C1603 /* Main.storyboard */; };
+		A88C90972045FAEE000C1603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88C90962045FAEE000C1603 /* Assets.xcassets */; };
+		A88C909A2045FAEE000C1603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88C90982045FAEE000C1603 /* LaunchScreen.storyboard */; };
+		A88C90A52045FAEE000C1603 /* qandaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88C90A42045FAEE000C1603 /* qandaTests.swift */; };
+		A88C90B02045FAEE000C1603 /* qandaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88C90AF2045FAEE000C1603 /* qandaUITests.swift */; };
+		A88E708A2046787600CC3CA0 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E70892046787600CC3CA0 /* QuestionTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A88C90A12045FAEE000C1603 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A88C90842045FAEE000C1603 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A88C908B2045FAEE000C1603;
+			remoteInfo = qanda;
+		};
+		A88C90AC2045FAEE000C1603 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A88C90842045FAEE000C1603 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A88C908B2045FAEE000C1603;
+			remoteInfo = qanda;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A85D526320461BB500D56660 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A88C908C2045FAEE000C1603 /* qanda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qanda.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A88C908F2045FAEE000C1603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A88C90912045FAEE000C1603 /* ShowAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllViewController.swift; sourceTree = "<group>"; };
+		A88C90942045FAEE000C1603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A88C90962045FAEE000C1603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A88C90992045FAEE000C1603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A88C909B2045FAEE000C1603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A88C90A02045FAEE000C1603 /* qandaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qandaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A88C90A42045FAEE000C1603 /* qandaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qandaTests.swift; sourceTree = "<group>"; };
+		A88C90A62045FAEE000C1603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A88C90AB2045FAEE000C1603 /* qandaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qandaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A88C90AF2045FAEE000C1603 /* qandaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qandaUITests.swift; sourceTree = "<group>"; };
+		A88C90B12045FAEE000C1603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A88E70892046787600CC3CA0 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A88C90892045FAEE000C1603 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A88C909D2045FAEE000C1603 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A88C90A82045FAEE000C1603 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A88C90832045FAEE000C1603 = {
+			isa = PBXGroup;
+			children = (
+				A88C908E2045FAEE000C1603 /* qanda */,
+				A88C90A32045FAEE000C1603 /* qandaTests */,
+				A88C90AE2045FAEE000C1603 /* qandaUITests */,
+				A88C908D2045FAEE000C1603 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A88C908D2045FAEE000C1603 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A88C908C2045FAEE000C1603 /* qanda.app */,
+				A88C90A02045FAEE000C1603 /* qandaTests.xctest */,
+				A88C90AB2045FAEE000C1603 /* qandaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A88C908E2045FAEE000C1603 /* qanda */ = {
+			isa = PBXGroup;
+			children = (
+				A88C908F2045FAEE000C1603 /* AppDelegate.swift */,
+				A88C90912045FAEE000C1603 /* ShowAllViewController.swift */,
+				A88C90932045FAEE000C1603 /* Main.storyboard */,
+				A88C90962045FAEE000C1603 /* Assets.xcassets */,
+				A88C90982045FAEE000C1603 /* LaunchScreen.storyboard */,
+				A88C909B2045FAEE000C1603 /* Info.plist */,
+				A85D526320461BB500D56660 /* LoginViewController.swift */,
+				A88E70892046787600CC3CA0 /* QuestionTableViewCell.swift */,
+			);
+			path = qanda;
+			sourceTree = "<group>";
+		};
+		A88C90A32045FAEE000C1603 /* qandaTests */ = {
+			isa = PBXGroup;
+			children = (
+				A88C90A42045FAEE000C1603 /* qandaTests.swift */,
+				A88C90A62045FAEE000C1603 /* Info.plist */,
+			);
+			path = qandaTests;
+			sourceTree = "<group>";
+		};
+		A88C90AE2045FAEE000C1603 /* qandaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A88C90AF2045FAEE000C1603 /* qandaUITests.swift */,
+				A88C90B12045FAEE000C1603 /* Info.plist */,
+			);
+			path = qandaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A88C908B2045FAEE000C1603 /* qanda */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A88C90B42045FAEE000C1603 /* Build configuration list for PBXNativeTarget "qanda" */;
+			buildPhases = (
+				A88C90882045FAEE000C1603 /* Sources */,
+				A88C90892045FAEE000C1603 /* Frameworks */,
+				A88C908A2045FAEE000C1603 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = qanda;
+			productName = qanda;
+			productReference = A88C908C2045FAEE000C1603 /* qanda.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A88C909F2045FAEE000C1603 /* qandaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A88C90B72045FAEE000C1603 /* Build configuration list for PBXNativeTarget "qandaTests" */;
+			buildPhases = (
+				A88C909C2045FAEE000C1603 /* Sources */,
+				A88C909D2045FAEE000C1603 /* Frameworks */,
+				A88C909E2045FAEE000C1603 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A88C90A22045FAEE000C1603 /* PBXTargetDependency */,
+			);
+			name = qandaTests;
+			productName = qandaTests;
+			productReference = A88C90A02045FAEE000C1603 /* qandaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A88C90AA2045FAEE000C1603 /* qandaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A88C90BA2045FAEE000C1603 /* Build configuration list for PBXNativeTarget "qandaUITests" */;
+			buildPhases = (
+				A88C90A72045FAEE000C1603 /* Sources */,
+				A88C90A82045FAEE000C1603 /* Frameworks */,
+				A88C90A92045FAEE000C1603 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A88C90AD2045FAEE000C1603 /* PBXTargetDependency */,
+			);
+			name = qandaUITests;
+			productName = qandaUITests;
+			productReference = A88C90AB2045FAEE000C1603 /* qandaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A88C90842045FAEE000C1603 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Rachel Ng";
+				TargetAttributes = {
+					A88C908B2045FAEE000C1603 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A88C909F2045FAEE000C1603 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A88C908B2045FAEE000C1603;
+					};
+					A88C90AA2045FAEE000C1603 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A88C908B2045FAEE000C1603;
+					};
+				};
+			};
+			buildConfigurationList = A88C90872045FAEE000C1603 /* Build configuration list for PBXProject "qanda" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A88C90832045FAEE000C1603;
+			productRefGroup = A88C908D2045FAEE000C1603 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A88C908B2045FAEE000C1603 /* qanda */,
+				A88C909F2045FAEE000C1603 /* qandaTests */,
+				A88C90AA2045FAEE000C1603 /* qandaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A88C908A2045FAEE000C1603 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A88C909A2045FAEE000C1603 /* LaunchScreen.storyboard in Resources */,
+				A88C90972045FAEE000C1603 /* Assets.xcassets in Resources */,
+				A88C90952045FAEE000C1603 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A88C909E2045FAEE000C1603 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A88C90A92045FAEE000C1603 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A88C90882045FAEE000C1603 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A85D526420461BB500D56660 /* LoginViewController.swift in Sources */,
+				A88E708A2046787600CC3CA0 /* QuestionTableViewCell.swift in Sources */,
+				A88C90922045FAEE000C1603 /* ShowAllViewController.swift in Sources */,
+				A88C90902045FAEE000C1603 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A88C909C2045FAEE000C1603 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A88C90A52045FAEE000C1603 /* qandaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A88C90A72045FAEE000C1603 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A88C90B02045FAEE000C1603 /* qandaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A88C90A22045FAEE000C1603 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A88C908B2045FAEE000C1603 /* qanda */;
+			targetProxy = A88C90A12045FAEE000C1603 /* PBXContainerItemProxy */;
+		};
+		A88C90AD2045FAEE000C1603 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A88C908B2045FAEE000C1603 /* qanda */;
+			targetProxy = A88C90AC2045FAEE000C1603 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A88C90932045FAEE000C1603 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A88C90942045FAEE000C1603 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A88C90982045FAEE000C1603 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A88C90992045FAEE000C1603 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A88C90B22045FAEE000C1603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A88C90B32045FAEE000C1603 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A88C90B52045FAEE000C1603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAP87QP52V;
+				INFOPLIST_FILE = qanda/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mancng.qanda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A88C90B62045FAEE000C1603 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAP87QP52V;
+				INFOPLIST_FILE = qanda/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mancng.qanda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A88C90B82045FAEE000C1603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = qandaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mancng.qandaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/qanda.app/qanda";
+			};
+			name = Debug;
+		};
+		A88C90B92045FAEE000C1603 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = qandaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mancng.qandaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/qanda.app/qanda";
+			};
+			name = Release;
+		};
+		A88C90BB2045FAEE000C1603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = qandaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mancng.qandaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = qanda;
+			};
+			name = Debug;
+		};
+		A88C90BC2045FAEE000C1603 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = qandaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mancng.qandaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = qanda;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A88C90872045FAEE000C1603 /* Build configuration list for PBXProject "qanda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A88C90B22045FAEE000C1603 /* Debug */,
+				A88C90B32045FAEE000C1603 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A88C90B42045FAEE000C1603 /* Build configuration list for PBXNativeTarget "qanda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A88C90B52045FAEE000C1603 /* Debug */,
+				A88C90B62045FAEE000C1603 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A88C90B72045FAEE000C1603 /* Build configuration list for PBXNativeTarget "qandaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A88C90B82045FAEE000C1603 /* Debug */,
+				A88C90B92045FAEE000C1603 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A88C90BA2045FAEE000C1603 /* Build configuration list for PBXNativeTarget "qandaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A88C90BB2045FAEE000C1603 /* Debug */,
+				A88C90BC2045FAEE000C1603 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A88C90842045FAEE000C1603 /* Project object */;
+}
