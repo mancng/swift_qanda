@@ -1,22 +1,15 @@
 //
-//  QuestionTableViewCell.swift
+//  AnswerTableViewCell.swift
 //  qanda
 //
-//  Created by Rachel Ng on 2/27/18.
+//  Created by Rachel Ng on 2/28/18.
 //  Copyright © 2018 Rachel Ng. All rights reserved.
 //
 
 import UIKit
 
-class QuestionTableViewCell: UITableViewCell {
-    
-    @IBOutlet var contentLabel: UILabel!
-    
-    @IBOutlet var answerCountLabel: UILabel!
-    
-    @IBAction func replyBtn(_ sender: UIButton) {
-    }
-    
+class AnswerTableViewCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
