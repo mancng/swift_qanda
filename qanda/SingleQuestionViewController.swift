@@ -18,14 +18,11 @@ protocol SingleQuestionViewControllerDelegate: class {
 
 class SingleQuestionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AnswerTableViewCellDelegate {
 
-    
     var getSingleQuestion: Question = Question()
     var questionId: String = ""
     var questionContent: String = ""
     var questionDesc: String = ""
     var allAnswers = [Answer]()
-    var singleAnswer = Answer()
-    var likes: Int = 0
     weak var delegate: SingleQuestionViewControllerDelegate?
     
     @IBOutlet var questionContentLabel: UILabel!
@@ -44,18 +41,10 @@ class SingleQuestionViewController: UIViewController, UITableViewDataSource, UIT
         
         answersTableView.dataSource = self
         answersTableView.delegate = self
-
+        
+        getSingleQuestionData()
         questionContentLabel.text = getSingleQuestion.questionContent
         questionDescLabel.text = getSingleQuestion.questionDesc
-        getSingleQuestionData()
-//        print(getSingleQuestion.answers)
-//        if let getAllAnswers = getSingleQuestion.answers{
-//            let getAllAnswersArray = getAllAnswers as! NSArray
-//            for item in getAllAnswersArray as! [AnyObject] {
-//                let singleAnswer = Answer(answerId: item["_id"] as! String, answerContent: item["answerContent"] as! String, answerDesc: item["answerDesc"] as! String, likes: item["likes"] as! Int, writer: item["writer"] as! String)
-//                self.allAnswers.append(singleAnswer)
-//            }
-//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,10 +58,9 @@ class SingleQuestionViewController: UIViewController, UITableViewDataSource, UIT
             (data, response, error) in
             do {
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String: AnyObject?] {
-                    print("///////////////////////////")
-                    print(jsonResult)
-                    
-//                    _ = jsonResult as! NSArray
+//                    print("///////////////////////////")
+//                    print(jsonResult)
+
                     for item in jsonResult["answers"] as! [AnyObject]{
                         let singleAnswer = Answer(answerId: item["_id"] as! String, answerContent: item["answerContent"] as! String, answerDesc: item["answerDesc"] as! String, likes: item["likes"] as! Int, writer: item["writer"] as! String)
                         self.allAnswers.append(singleAnswer)
@@ -102,19 +90,19 @@ class SingleQuestionViewController: UIViewController, UITableViewDataSource, UIT
         let cell = answersTableView.dequeueReusableCell(withIdentifier: "answerCell", for: indexPath) as! AnswerTableViewCell
         cell.delegate = self
         let currentAnswer = allAnswers[indexPath.row] as Answer
+        cell.getCurrentAnswer = currentAnswer
         cell.writerLabel.text = currentAnswer.writer
         cell.answerContentLabel.text = currentAnswer.answerContent
         cell.answerDescLabel.text = currentAnswer.answerDesc
         cell.likesLabel.text = String(currentAnswer.likes)
-        singleAnswer = currentAnswer
         return cell
     }
     
     
     // MARK: Delegate
-    func addLike() {
+    func addLike(currentAnswerId: String) {
         print("Like CLICKED")
-        let parameters: [String: String] = ["answerId" : self.singleAnswer.answerId]
+        let parameters: [String: String] = ["answerId" : currentAnswerId]
         
         let url = URL(string: "http://localhost:8000/api/write/\(questionId)/liked")!
         
@@ -147,7 +135,6 @@ class SingleQuestionViewController: UIViewController, UITableViewDataSource, UIT
                                 // Switch back to the main thread
                                 OperationQueue.main.addOperation {
                                     self.dismiss(animated: true, completion: nil)
-                                    
                                 }
                             }
                         }

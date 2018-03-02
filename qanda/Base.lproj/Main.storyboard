@@ -518,7 +518,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="SHb-93-awg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.92549019610000005" green="0.63921568630000003" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -606,6 +606,7 @@
                                         <connections>
                                             <outlet property="answerContentLabel" destination="t3i-pJ-YFh" id="gFA-AY-Txn"/>
                                             <outlet property="answerDescLabel" destination="Q6N-gL-wIS" id="Mmc-jc-Dzj"/>
+                                            <outlet property="likeBtn" destination="uvS-vP-5Fb" id="pEm-tu-dM2"/>
                                             <outlet property="likesLabel" destination="KPs-Jl-E5l" id="OTf-BW-Amq"/>
                                             <outlet property="writerLabel" destination="b4i-cm-P0g" id="Txh-ry-RbN"/>
                                         </connections>
@@ -617,7 +618,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="Wd8-a0-kLO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.69019607839999997" green="0.68627450980000004" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -703,7 +704,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="HYz-09-h0j"/>
-        <segue reference="e96-xh-wW9"/>
+        <segue reference="P7I-Ot-Fn6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27268350120000001" green="0.25537627940000002" blue="0.22358566520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

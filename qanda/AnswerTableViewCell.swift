@@ -9,20 +9,22 @@
 import UIKit
 
 protocol AnswerTableViewCellDelegate: class {
-    func addLike()
+    func addLike(currentAnswerId: String)
 }
 
 class AnswerTableViewCell: UITableViewCell {
     
     weak var delegate: AnswerTableViewCellDelegate?
+    var getCurrentAnswer: Answer = Answer()
     
     @IBOutlet var writerLabel: UILabel!
     @IBOutlet var answerContentLabel: UILabel!
     @IBOutlet var answerDescLabel: UILabel!
     @IBOutlet var likesLabel: UILabel!
+    @IBOutlet var likeBtn: UILabel!
     
     @IBAction func likeBtnPressed(_ sender: UIButton) {
-        delegate?.addLike()
+        delegate?.addLike(currentAnswerId: getCurrentAnswer.answerId)
     }
     
     

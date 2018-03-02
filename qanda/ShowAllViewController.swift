@@ -24,7 +24,6 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var questionTableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,6 +55,10 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        questionTableView.reloadData()
     }
     
     func getQuestionsData(){
@@ -113,8 +116,8 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: Delegate
     func createQuestion(by controller: UIViewController, theQuestionContent: String!, theQuestionDesc: String?) {
         let questionToCreate: [String: Any] = ["questionContent": theQuestionContent, "questionDesc": theQuestionDesc]
-        print("**********************")
-        print(questionToCreate)
+//        print("**********************")
+//        print(questionToCreate)
         
         let url = URL(string: "http://localhost:8000/api/questions")!
         
@@ -146,10 +149,9 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
                             } else {
                                 // Switch back to the main thread
                                 OperationQueue.main.addOperation {
-//                                    self.getQuestionsData()
                                     self.dismiss(animated: true, completion: nil)
-                                    
-//                                    self.performSegue(withIdentifier: "showAllSegue", sender: self)
+                                    self.getQuestionsData()
+                                    self.questionTableView.reloadData()
                                 }
                             }
                         }
@@ -245,17 +247,13 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         singleQuestion = self.allQuestions[indexPath.row] as Question
         questionId = singleQuestion.questionId
-        
-//        performSegue(withIdentifier: "showSingleSegue", sender: indexPath)
         performSegue(withIdentifier: "createAnswerSegue", sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        print("I got clicked")
         singleQuestion = self.allQuestions[indexPath.row] as Question
         questionId = singleQuestion.questionId
         self.performSegue(withIdentifier: "showSingleSegue", sender: indexPath)
-        
     }
     
     
