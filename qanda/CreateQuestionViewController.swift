@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CreateQuestionViewControllerDelegate: class {
-    func createQuestion(by controller: UIViewController, questionContent: String?, questionDesc: String?)
+    func createQuestion(by controller: UIViewController, theQuestionContent: String!, theQuestionDesc: String?)
     
     func cancel(by controller: UIViewController)
     
@@ -29,7 +29,7 @@ class CreateQuestionViewController: UIViewController {
         let getContent = contentTextField.text!
         let getDesc = descTextField.text!
         
-        delegate?.createQuestion(by: self, questionContent: getContent , questionDesc: getDesc)
+        delegate?.createQuestion(by: self, theQuestionContent: getContent, theQuestionDesc: getDesc)
         print("to save")
         
     }

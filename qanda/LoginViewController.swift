@@ -41,10 +41,20 @@ class LoginViewController: UIViewController, ShowAllViewControllerDelegate {
             guard error == nil else {
                 return
             }
-            
             do {
                 if let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String: Any] {
-                    print(json)
+                    if let dictionary = json as? [String: Any] {
+                        if let name = dictionary["name"] as? String {
+                            if name == "ValidationError" {
+                                print("Parsed an error message")
+                            } else {
+                                // Switch back to the main thread
+                                OperationQueue.main.addOperation {
+                                    self.performSegue(withIdentifier: "showAllSegue", sender: self)
+                                }
+                            }
+                        }
+                    }
                 }
             } catch let error {
                 print(error.localizedDescription)
@@ -66,11 +76,15 @@ class LoginViewController: UIViewController, ShowAllViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Navigation
+    // MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nav = segue.destination as! UINavigationController
-        let showAllViewController = nav.topViewController as! ShowAllViewController
-        showAllViewController.delegate = self
+        if segue.identifier == "showAllSegue" {
+            let nav = segue.destination as! UINavigationController
+            let showAllViewController = nav.topViewController as! ShowAllViewController
+            showAllViewController.delegate = self
+        } else {
+            print("NOT logged in")
+        }
     }
 
 

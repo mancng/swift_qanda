@@ -9,11 +9,20 @@
 import Foundation
 
 struct User {
-    static var name = ""
+    let name: String
 }
 
-class Question : NSDictionary {
+struct Question {
+    var questionId: String!
     var questionContent: String!
     var questionDesc: String!
-    var answers : [AnyObject] = []
+    var answers: [AnyObject]? = []
+}
+
+struct Answer {
+    var answerId: String!
+    var answerContent: String!
+    var answerDesc: String!
+    var likes: Int = 0
+    var writer: String!
 }

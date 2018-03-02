@@ -8,8 +8,24 @@
 
 import UIKit
 
-class AnswerTableViewCell: UITableViewCell {
+protocol AnswerTableViewCellDelegate: class {
+    func addLike()
+}
 
+class AnswerTableViewCell: UITableViewCell {
+    
+    weak var delegate: AnswerTableViewCellDelegate?
+    
+    @IBOutlet var writerLabel: UILabel!
+    @IBOutlet var answerContentLabel: UILabel!
+    @IBOutlet var answerDescLabel: UILabel!
+    @IBOutlet var likesLabel: UILabel!
+    
+    @IBAction func likeBtnPressed(_ sender: UIButton) {
+        delegate?.addLike()
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

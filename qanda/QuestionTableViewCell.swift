@@ -8,14 +8,13 @@
 
 import UIKit
 
+
 class QuestionTableViewCell: UITableViewCell {
     
     @IBOutlet var contentLabel: UILabel!
     
     @IBOutlet var answerCountLabel: UILabel!
     
-    @IBAction func replyBtn(_ sender: UIButton) {
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +23,6 @@ class QuestionTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
