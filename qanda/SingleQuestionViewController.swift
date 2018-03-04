@@ -57,15 +57,13 @@ class SingleQuestionViewController: UIViewController, UITableViewDataSource, UIT
         let task = session.dataTask(with: url!) {
             (data, response, error) in
             do {
+                self.allAnswers = []
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String: AnyObject?] {
-//                    print("///////////////////////////")
-//                    print(jsonResult)
-
                     for item in jsonResult["answers"] as! [AnyObject]{
                         let singleAnswer = Answer(answerId: item["_id"] as! String, answerContent: item["answerContent"] as! String, answerDesc: item["answerDesc"] as! String, likes: item["likes"] as! Int, writer: item["writer"] as! String)
                         self.allAnswers.append(singleAnswer)
+                        // send the reload data task back to the main thread
                         OperationQueue.main.addOperation {
-                            
                             self.answersTableView.reloadData()
                         }
                     }
@@ -78,9 +76,7 @@ class SingleQuestionViewController: UIViewController, UITableViewDataSource, UIT
         task.resume()
     }
     
-    
-    
-    
+
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.allAnswers.count
@@ -128,14 +124,15 @@ class SingleQuestionViewController: UIViewController, UITableViewDataSource, UIT
             do {
                 if let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String: Any] {
                     if let dictionary = json as? [String: Any] {
-                        if let name = dictionary["name"] as? String {
-                            if name == "ValidationError" {
-                                print("Parsed an error message")
-                            } else {
-                                // Switch back to the main thread
-                                OperationQueue.main.addOperation {
-                                    self.dismiss(animated: true, completion: nil)
-                                }
+//                        print(dictionary)
+                        if let error = dictionary["error"] as? [String: AnyObject] {
+                            if (error["message"] != nil) {
+                                print(error["message"]!)
+                            }
+                        }   else {
+                            DispatchQueue.main.async {
+//                                print("in dispatch")
+                                self.getSingleQuestionData()
                             }
                         }
                     }

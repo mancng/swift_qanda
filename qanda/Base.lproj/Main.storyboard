@@ -225,11 +225,11 @@
                                 <color key="textColor" red="0.92549019610000005" green="0.63921568630000003" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRv-HI-9Z0">
-                                <rect key="frame" x="16" y="131" width="109" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question: (minimum 10 characters)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRv-HI-9Z0">
+                                <rect key="frame" x="16" y="131" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Q9f-mO-ohl"/>
-                                    <constraint firstAttribute="width" constant="109" id="xUc-6z-rOt"/>
+                                    <constraint firstAttribute="width" constant="343" id="xUc-6z-rOt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -290,7 +290,7 @@
                             <constraint firstItem="6B0-Qi-1jg" firstAttribute="leading" secondItem="dZN-Nv-rND" secondAttribute="leading" constant="16" id="C6C-sX-wJ6"/>
                             <constraint firstItem="6B0-Qi-1jg" firstAttribute="top" secondItem="kRv-HI-9Z0" secondAttribute="bottom" constant="8" id="RYZ-Ll-Ut2"/>
                             <constraint firstItem="jYD-pR-9Gr" firstAttribute="top" secondItem="BMe-2h-24t" secondAttribute="bottom" constant="8" id="Rfq-6d-gXI"/>
-                            <constraint firstItem="dZN-Nv-rND" firstAttribute="trailing" secondItem="kRv-HI-9Z0" secondAttribute="trailing" constant="250" id="UgM-wd-pI3"/>
+                            <constraint firstItem="dZN-Nv-rND" firstAttribute="trailing" secondItem="kRv-HI-9Z0" secondAttribute="trailing" constant="16" id="UgM-wd-pI3"/>
                             <constraint firstItem="BMe-2h-24t" firstAttribute="top" secondItem="6B0-Qi-1jg" secondAttribute="bottom" constant="70" id="Wrg-p6-a48"/>
                             <constraint firstItem="h8j-yd-IkP" firstAttribute="top" secondItem="dZN-Nv-rND" secondAttribute="top" constant="22" id="Yh3-dA-0bO"/>
                             <constraint firstItem="BMe-2h-24t" firstAttribute="leading" secondItem="dZN-Nv-rND" secondAttribute="leading" constant="16" id="bFt-br-okk"/>
@@ -324,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6L8-1Q-F9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2846" y="-612"/>
+            <point key="canvasLocation" x="2845.5999999999999" y="-612.14392803598207"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e9B-dn-WDS">
@@ -441,8 +441,8 @@
                                 <color key="textColor" red="0.92549019610000005" green="0.63921568630000003" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Answer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXN-Xz-NLK">
-                                <rect key="frame" x="16" y="245" width="163" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Answer: (minimum 5 characters)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXN-Xz-NLK">
+                                <rect key="frame" x="16" y="245" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="dkc-jT-BGH"/>
                                 </constraints>
@@ -457,7 +457,7 @@
                             <constraint firstItem="zfB-Ug-PTg" firstAttribute="centerX" secondItem="zoR-jy-ydA" secondAttribute="centerX" id="4Dg-kS-2Xw"/>
                             <constraint firstItem="lxG-1W-oZb" firstAttribute="leading" secondItem="mSd-Ls-Jpw" secondAttribute="leading" constant="16" id="5U6-ad-QiY"/>
                             <constraint firstItem="mSd-Ls-Jpw" firstAttribute="bottom" secondItem="wWo-7B-t6I" secondAttribute="bottom" constant="54" id="81g-fk-96E"/>
-                            <constraint firstItem="mSd-Ls-Jpw" firstAttribute="trailing" secondItem="oXN-Xz-NLK" secondAttribute="trailing" constant="196" id="ABe-q0-imx"/>
+                            <constraint firstItem="mSd-Ls-Jpw" firstAttribute="trailing" secondItem="oXN-Xz-NLK" secondAttribute="trailing" constant="16" id="ABe-q0-imx"/>
                             <constraint firstItem="mSd-Ls-Jpw" firstAttribute="trailing" secondItem="ib8-iK-Aoh" secondAttribute="trailing" constant="16" id="AVi-b3-C9c"/>
                             <constraint firstItem="ib8-iK-Aoh" firstAttribute="top" secondItem="mSd-Ls-Jpw" secondAttribute="top" constant="24" id="C6T-lh-6YX"/>
                             <constraint firstItem="mSd-Ls-Jpw" firstAttribute="trailing" secondItem="XIp-lu-67v" secondAttribute="trailing" constant="16" id="Epf-fC-CVp"/>
@@ -503,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABE-Y8-Ctu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2846" y="149"/>
+            <point key="canvasLocation" x="2845.5999999999999" y="148.87556221889056"/>
         </scene>
         <!--Single Question View Controller-->
         <scene sceneID="8i5-yA-LeT">
@@ -704,7 +704,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="HYz-09-h0j"/>
-        <segue reference="P7I-Ot-Fn6"/>
+        <segue reference="e96-xh-wW9"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27268350120000001" green="0.25537627940000002" blue="0.22358566520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

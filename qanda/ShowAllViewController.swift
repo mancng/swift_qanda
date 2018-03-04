@@ -67,6 +67,7 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
         let task = session.dataTask(with: url!) {
             (data, response, error) in
             do {
+                self.allQuestions = []
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String: AnyObject?] {
 //                    print(jsonResult)
                     if let result = jsonResult["questions"] {
@@ -74,6 +75,7 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
                         for item in jsonResult["questions"] as! [AnyObject]{
                             let singleQuestion = Question(questionId: item["_id"] as! String, questionContent: item["questionContent"] as! String, questionDesc: item["questionDesc"] as! String, answers: item["answers"] as? [AnyObject])
                             self.allQuestions.append(singleQuestion)
+                            // send reload table view operations back to the main thread
                             OperationQueue.main.addOperation {
                                 self.questionTableView.reloadData()
                             }
@@ -116,9 +118,6 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: Delegate
     func createQuestion(by controller: UIViewController, theQuestionContent: String!, theQuestionDesc: String?) {
         let questionToCreate: [String: Any] = ["questionContent": theQuestionContent, "questionDesc": theQuestionDesc]
-//        print("**********************")
-//        print(questionToCreate)
-        
         let url = URL(string: "http://localhost:8000/api/questions")!
         
         let session = URLSession.shared
@@ -143,16 +142,16 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
             do {
                 if let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String: Any] {
                     if let dictionary = json as? [String: Any] {
-                        if let name = dictionary["name"] as? String {
-                            if name == "ValidationError" {
-                                print("Parsed an error message")
-                            } else {
-                                // Switch back to the main thread
-                                OperationQueue.main.addOperation {
-                                    self.dismiss(animated: true, completion: nil)
-                                    self.getQuestionsData()
-                                    self.questionTableView.reloadData()
-                                }
+                        print(dictionary)
+                        if (dictionary["error"] != nil) {
+                            print("error from adding answer")
+                            print(dictionary["message"]!)
+                            
+                        } else {
+                            DispatchQueue.main.async {
+                                print("in dispatch")
+                                self.getQuestionsData()
+                                self.dismiss(animated: true, completion: nil)
                             }
                         }
                     }
@@ -162,7 +161,6 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         })
         task.resume()
-        dismiss(animated: true, completion: nil)
     }
     
     func createAnswer(by controller: UIViewController, answerContent: String, answerDesc: String, theQuestionId: String, writer: String) {
@@ -195,15 +193,16 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
             do {
                 if let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String: Any] {
                     if let dictionary = json as? [String: Any] {
-                        if let name = dictionary["name"] as? String {
-                            if name == "ValidationError" {
-                                print("Parsed an error message")
-                            } else {
-                                // Switch back to the main thread
-                                OperationQueue.main.addOperation {
-                                    self.dismiss(animated: true, completion: nil)
-                                    self.getQuestionsData()
-                                }
+                        print("GOT This dictionary")
+                        print(dictionary)
+                        if (dictionary["error"] != nil) {
+                            print("Parsed an error message")
+                            print(dictionary["message"]!)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("in dispatch")
+                                self.getQuestionsData()
+                                self.dismiss(animated: true, completion: nil)
                             }
                         }
                     }
@@ -213,7 +212,6 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         })
         task.resume()
-        self.dismiss(animated: true, completion: nil)
     }
     
     func cancel(by controller: UIViewController) {
