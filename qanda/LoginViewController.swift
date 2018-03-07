@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, ShowAllViewControllerDelegate {
 
         let parameters = ["name": userName]
         
-        let url = URL(string: "http://localhost:8000/api/users")!
+        let url = URL(string: "\(apiUrl.http)api/users")!
         
         let session = URLSession.shared
         
@@ -67,8 +67,7 @@ class LoginViewController: UIViewController, ShowAllViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,6 +85,21 @@ class LoginViewController: UIViewController, ShowAllViewControllerDelegate {
             print("NOT logged in")
         }
     }
+    
+    @objc func hideKeyBoard(sender: UITapGestureRecognizer? = nil){
+        view.endEditing(true)
+    }
 
+}
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

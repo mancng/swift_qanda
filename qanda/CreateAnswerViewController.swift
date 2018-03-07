@@ -49,8 +49,8 @@ class CreateAnswerViewController: UIViewController {
         super.viewDidLoad()
         questionContentLabel.text = theQuestion.questionContent
         questionDescLabel.text = theQuestion.questionDesc
+        self.hideKeyboardWhenTappedAround()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

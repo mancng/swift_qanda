@@ -31,14 +31,14 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
         questionTableView.delegate = self
         
         // Get current user
-        let url = URL(string: "http://localhost:8000/api/users/current")
+        let url = URL(string: "\(apiUrl.http)api/users/current")
         let session = URLSession.shared
         let task = session.dataTask(with: url!) {
             (data, response, error) in
             do {
                 let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String: Any]
                 print("This is from ShowAllViewController")
-                print(jsonResult!["name"])
+                print(jsonResult!["name"]!)
                 print("This ends in ShowAllViewController")
                 self.userName = jsonResult!["name"] as! String
                 OperationQueue.main.addOperation {
@@ -62,9 +62,9 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func getQuestionsData(){
-        let url = URL(string: "http://localhost:8000/api/questions")
+        let url = URL(string: "\(apiUrl.http)api/questions")!
         let session = URLSession.shared
-        let task = session.dataTask(with: url!) {
+        let task = session.dataTask(with: url) {
             (data, response, error) in
             do {
                 self.allQuestions = []
@@ -118,7 +118,7 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: Delegate
     func createQuestion(by controller: UIViewController, theQuestionContent: String!, theQuestionDesc: String?) {
         let questionToCreate: [String: Any] = ["questionContent": theQuestionContent, "questionDesc": theQuestionDesc]
-        let url = URL(string: "http://localhost:8000/api/questions")!
+        let url = URL(string: "\(apiUrl.http)api/questions")!
         
         let session = URLSession.shared
         
@@ -169,7 +169,7 @@ class ShowAllViewController: UIViewController, UITableViewDataSource, UITableVie
         
         answerToCreate = ["answers": ["answerContent": answerContent as AnyObject, "answerDesc": answerDesc as AnyObject, "writer": writer as AnyObject]]
         
-        let url = URL(string: "http://localhost:8000/api/write/\(theQuestionId)")!
+        let url = URL(string: "\(apiUrl.http)api/write/\(theQuestionId)")!
         
         let session = URLSession.shared
         

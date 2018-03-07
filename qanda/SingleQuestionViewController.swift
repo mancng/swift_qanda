@@ -52,7 +52,7 @@ class SingleQuestionViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func getSingleQuestionData() {
-        let url = URL(string: "http://localhost:8000/api/questions/\(self.questionId)")
+        let url = URL(string: "\(apiUrl.http)api/questions/\(self.questionId)")
         let session = URLSession.shared
         let task = session.dataTask(with: url!) {
             (data, response, error) in
@@ -100,7 +100,7 @@ class SingleQuestionViewController: UIViewController, UITableViewDataSource, UIT
         print("Like CLICKED")
         let parameters: [String: String] = ["answerId" : currentAnswerId]
         
-        let url = URL(string: "http://localhost:8000/api/write/\(questionId)/liked")!
+        let url = URL(string: "\(apiUrl.http)api/write/\(questionId)/liked")!
         
         let session = URLSession.shared
         

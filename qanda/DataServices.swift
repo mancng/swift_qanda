@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct apiUrl {
+    static var http = "http://54.87.169.242/"
+}
+
 struct User {
     let name: String
 }
