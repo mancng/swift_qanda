@@ -9,7 +9,8 @@
 import Foundation
 
 struct apiUrl {
-    static var http = "http://54.87.169.242/"
+//    static var http = "http://54.87.169.242/"
+    static var http = "http://localhost:8000/"
 }
 
 struct User {
