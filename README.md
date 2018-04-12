@@ -1,6 +1,7 @@
 # QandA - iOS version
 
 A message board where users can post questions and answers for anything. Users can also vote to like any posted answers. Both web and iOS versions are connected to the same database via RESTful api.
+
 Technologies used: MEAN (MongoDB, Express.js, Angular, Node.js), HTML5, CSS3, Flex-Layout, Javascript, and Swift
 
 <img width="517" alt="screen shot 2018-04-11 at 3 27 26 pm" src="https://user-images.githubusercontent.com/11822719/38646794-452592ba-3d9e-11e8-9afe-ac8557591571.png">
